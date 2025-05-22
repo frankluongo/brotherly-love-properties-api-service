@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="/static/styles/app.css">
+  <title>All Reviews</title>
+</head>
+
+<body>
+  <div class="group">
+    {{#each reviews}}
+    <article class="review">
+      <header class="review__header">
+        <figure class="review-header__column review-header__column--left">
+          <div title="{{this.reviewer}}" class="review__avatar">{{firstLetter this.reviewer}}</div>
+        </figure>
+        <div class="review-header__column review-header__column--right">
+          <h3 class="review__title">{{this.reviewer}}</h3>
+          <p class="review__subtitle">{{this.reviewCount}} Reviews</p>
+        </div>
+      </header>
+      <div class="review__section">
+        ⭐️&nbsp;⭐️&nbsp;⭐️&nbsp;⭐️&nbsp;⭐️&nbsp;
+      </div>
+      <div class="review__section">
+        <p>{{this.comment}}</p>
+      </div>
+    </article>
+    {{/each}}
+  </div>
+</body>
+
+<style>
+  .group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .review {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 20rem;
+    padding: 1rem;
+
+    background-color: var(--theme-color-background--alternate);
+    box-shadow: var(--box-shadow--l2);
+  }
+
+  .review__avatar {
+    --size: 2.5rem;
+
+    align-items: center;
+    display: flex;
+    height: var(--size);
+    justify-content: center;
+    width: var(--size);
+
+    color: var(--theme-color-text--inverse);
+
+    background-color: var(--theme-color-background--inverse);
+    border-radius: 50%;
+
+    object-fit: cover;
+  }
+
+  .review__header {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .review-header__column--right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .review__title {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+</style>
+
+</html>

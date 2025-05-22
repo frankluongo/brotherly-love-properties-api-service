@@ -1,0 +1,239 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.sb-show-main.sb-main-padded {
+  padding: 0;
+}
+
+.global\:container {
+  max-width: var(--container-width);
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 5vw, 2rem);
+}
+
+h3,
+.h3 {
+  font-size: clamp(1rem, 4vw, 2rem);
+}
+
+p {
+  line-height: 1.6;
+}
+
+:root {
+  /* ================================================ */
+  --box-shadow--l1: 0 0 5px 0 var(--theme-color-box-shadow);
+  --box-shadow--l2: 0 0 8px 0 var(--theme-color-box-shadow);
+  --box-shadow--l3: 0 0 10px 0 var(--theme-color-box-shadow);
+  --box-shadow--l4: 0 0 12px 0 var(--theme-color-box-shadow);
+  --box-shadow--l5: 0 0 15px 0 var(--theme-color-box-shadow);
+  /* ================================================ */
+  --color-black: #262626;
+  --color-gray--darker: #595959;
+  --color-gray--darkest: #333333;
+  --color-gray--lighter: #e5e5e5;
+  --color-gray--lightest: #fafafa;
+  --color-indian-red: #e75c5a;
+  --color-indian-red--dark: #8b3736;
+  --color-verdigiris: #18a3a5;
+  --color-white: #fff;
+  /* ================================================ */
+  --theme-color-background--default: var(--color-white);
+  --theme-color-background--alternate: var(--color-gray--lightest);
+  --theme-color-background--inverse: var(--color-black);
+
+  --theme-color-border--default: var(--color-gray--lighter);
+  --theme-color-box-shadow: rgba(0, 0, 0, 0.15);
+
+  --theme-color-primary: var(--color-indian-red);
+  --theme-color-secondary: var(--color-verdigiris);
+
+  --theme-color-button-background--default: var(--color-indian-red);
+  --theme-color-button-border--default: var(--color-indian-red);
+  --theme-color-button-box-shadow--default: var(--color-indian-red--dark);
+  --theme-color-button-text--default: var(--color-white);
+
+  --theme-color-button-background--secondary: var(--color-white);
+  --theme-color-button-border--secondary: var(--color-black);
+  --theme-color-button-box-shadow--secondary: var(--color-black);
+  --theme-color-button-text--secondary: var(--color-indian-red);
+
+  --theme-color-text--default: var(--color-black);
+  --theme-color-text--inverse: var(--color-white);
+
+  --theme-color-white: var(--color-white);
+  /* ================================================ */
+  --box-shadow-black: 5px 4px 0 rgba(61, 64, 64, 0.3);
+  --box-shadow-orange: 5px 4px 0 rgba(255, 100, 97, 0.35);
+  /* ================================================ */
+  --container-width: 90rem;
+  --max-paragraph-length: 75em;
+  /* ================================================ */
+  --settings-primary-font: "Figtree", sans-serif;
+  --settings-secondary-font: "Zilla Slab", serif;
+  /* ================================================ */
+  --font-size--heading-one: 2rem;
+  --font-size--heading-two: 1.75rem;
+  --font-size--heading-three: 1.5rem;
+  --font-size--heading-four: 1.1rem;
+  --font-size--heading-five: 1rem;
+  --font-size--heading-six: 0.875rem;
+  --font-size--paragraph: 1rem;
+  --font-size--small: 0.75rem;
+  --font-size--page-heading-small: 2.65rem;
+  --font-size--page-heading: 2.85rem;
+  --font-size--paragraph-large: 1.25rem;
+  --font-size--paragraph: 1rem;
+  --font-size--section-heading: 2.5rem;
+  --font-size--section-subheading: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme-color-background--alternate: var(--color-gray--darkest);
+    --theme-color-background--default: var(--color-black);
+    --theme-color-background--inverse: var(--color-white);
+    --theme-color-border--default: var(--color-gray--darker);
+    --theme-color-box-shadow: rgba(255, 255, 255, 0.05);
+    --theme-color-primary: var(--color-indian-red);
+    --theme-color-text--default: var(--color-white);
+    --theme-color-text--inverse: var(--color-black);
+  }
+}
+
+html,
+body {
+  color: var(--theme-color-text--default);
+  font-family: "Figtree", sans-serif;
+
+  background: var(--theme-color-background--default);
+}
